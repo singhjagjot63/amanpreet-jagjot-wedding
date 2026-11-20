@@ -387,7 +387,13 @@ button { font: inherit; cursor: pointer; }
   justify-content: flex-start;
   gap: .55rem; margin: .5rem 0 0;
 }
-.ghadoli-heading h3 { flex: none; margin: 0; }
+.ghadoli-heading h3 {
+  flex: none; margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  font-weight: 600; color: var(--rose-deep);
+  line-height: 1.05;
+}
 .dance-img {
   object-fit: contain; flex: none;
   pointer-events: none; user-select: none;
@@ -398,21 +404,18 @@ button { font: inherit; cursor: pointer; }
   transform-origin: center 80%;
   animation: dhol-beat 1.15s ease-in-out infinite;
 }
-.bhangra-img {
-  width: 40px; height: 70px;
-  transform-origin: center bottom;
-  animation: bhangra-sway 1.7s ease-in-out infinite;
-}
+.dhol-img-right { animation-name: dhol-beat-mirror; }
 @keyframes dhol-beat {
   0%, 100% { transform: scale(1) rotate(-4deg); }
   50% { transform: scale(1.1) rotate(4deg); }
 }
-@keyframes bhangra-sway {
-  0%, 100% { transform: rotate(-7deg) translateY(0); }
-  50% { transform: rotate(7deg) translateY(-5px); }
+@keyframes dhol-beat-mirror {
+  0%, 100% { transform: scaleX(-1) scale(1) rotate(4deg); }
+  50% { transform: scaleX(-1) scale(1.1) rotate(-4deg); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .dhol-img, .bhangra-img { animation: none; }
+  .dhol-img { animation: none; }
+  .dhol-img-right { transform: scaleX(-1); }
 }
 
 .info-list { display: grid; gap: .95rem; margin: 1.6rem 0; }
@@ -579,8 +582,8 @@ button { font: inherit; cursor: pointer; }
 }
 .modal-kicker { font-size: .68rem; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; color: var(--pink); }
 .modal-ghadoli-heading { justify-content: center; gap: .8rem; margin: .4rem 0 1rem; }
+.modal-card .modal-ghadoli-heading h3 { font-size: clamp(2.6rem, 6vw, 3.4rem); }
 .modal-ghadoli-heading .dhol-img { width: 60px; height: 60px; }
-.modal-ghadoli-heading .bhangra-img { width: 46px; height: 80px; }
 .modal-card h3 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 2.3rem; font-weight: 600; color: var(--rose-deep);
