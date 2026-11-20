@@ -373,15 +373,12 @@ button { font: inherit; cursor: pointer; }
 }
 .event-when { font-size: .9rem; color: var(--ink-soft); margin-top: .4rem; font-style: italic; }
 
-/* Ik Onkar at the very start of the Ghadoli card */
-.card-onkar {
-  grid-column: 1 / -1;
+/* Ik Onkar at the very top of the whole invitation */
+.hero-onkar {
   font-family: 'Noto Serif Gurmukhi', serif;
-  font-size: 1.9rem; line-height: 1;
-  color: var(--rose-deep);
-  text-align: center;
-  padding: 1.2rem 0 .3rem;
-  border-bottom: 1px solid var(--blush-deep);
+  font-size: clamp(2.4rem, 6vw, 3.2rem);
+  line-height: 1; color: var(--rose-deep);
+  margin-bottom: 1.4rem;
 }
 
 /* Animated dhol & bhangra beside the Ghadoli heading */
