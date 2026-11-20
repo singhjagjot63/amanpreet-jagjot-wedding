@@ -41,61 +41,53 @@
   }
 })();
 
-// ============ MUSIC (gentle generated melody) ============
+// ============ MUSIC (background track) ============
 (function () {
   var btn = document.getElementById('musicToggle');
   var label = document.getElementById('musicLabel');
-  var ctx = null, master = null, timer = null, playing = false;
-  var notes = [523.25, 587.33, 659.25, 783.99, 659.25, 587.33, 523.25, 493.88]; // soft pentatonic-ish
-  var step = 0;
+  var audio = document.getElementById('bgMusic');
+  if (!btn || !audio) return;
+  audio.volume = 0.55;
 
-  function note(freq, when, dur) {
-    var osc = ctx.createOscillator();
-    var gain = ctx.createGain();
-    osc.type = 'sine';
-    osc.frequency.value = freq;
-    gain.gain.setValueAtTime(0, when);
-    gain.gain.linearRampToValueAtTime(0.06, when + 0.15);
-    gain.gain.exponentialRampToValueAtTime(0.001, when + dur);
-    osc.connect(gain); gain.connect(master);
-    osc.start(when); osc.stop(when + dur + 0.1);
+  function setUI(playing) {
+    btn.classList.toggle('playing', playing);
+    btn.setAttribute('aria-pressed', playing ? 'true' : 'false');
+    label.textContent = playing ? 'Music Off' : 'Music On';
   }
 
-  function schedule() {
-    var now = ctx.currentTime;
-    notes.forEach(function (f, i) { note(f, now + i * 0.55, 1.4); });
-    // gentle low harmony
-    [261.63, 329.63, 392.00].forEach(function (f) { note(f, now, 4.4); });
-    step++;
+  function play() {
+    var p = audio.play();
+    if (p && typeof p.catch === 'function') {
+      p.then(function () { setUI(true); }).catch(function () { setUI(false); });
+    } else {
+      setUI(true);
+    }
   }
 
   btn.addEventListener('click', function () {
-    if (!playing) {
-      if (!ctx) {
-        var AC = window.AudioContext || window.webkitAudioContext;
-        if (!AC) return;
-        ctx = new AC();
-        master = ctx.createGain();
-        master.gain.value = 0.5;
-        master.connect(ctx.destination);
-      }
-      ctx.resume();
-      schedule();
-      timer = setInterval(schedule, 4400);
-      playing = true;
-      btn.classList.add('playing');
-      btn.setAttribute('aria-pressed', 'true');
-      label.textContent = 'Music Off';
+    if (audio.paused) {
+      play();
     } else {
-      clearInterval(timer);
-      if (master) master.gain.setTargetAtTime(0, ctx.currentTime, 0.2);
-      setTimeout(function () { if (!playing && master) master.gain.value = 0.5; }, 700);
-      playing = false;
-      btn.classList.remove('playing');
-      btn.setAttribute('aria-pressed', 'false');
-      label.textContent = 'Music On';
+      audio.pause();
+      setUI(false);
     }
   });
+
+  // Browsers may auto-pause audio in the background — keep the UI in sync.
+  audio.addEventListener('play', function () { setUI(true); });
+  audio.addEventListener('pause', function () { setUI(false); });
+
+  // Try to start softly on first user interaction (autoplay policies).
+  var started = false;
+  function autoStart() {
+    if (started) return;
+    started = true;
+    play();
+    document.removeEventListener('click', autoStart);
+    document.removeEventListener('touchstart', autoStart);
+  }
+  document.addEventListener('click', autoStart);
+  document.addEventListener('touchstart', autoStart);
 })();
 
 // ============ INVITATION MODALS ============
