@@ -543,6 +543,11 @@ button { font: inherit; cursor: pointer; }
 }
 .modal-card h4 em { color: var(--pink); }
 .modal-text { font-size: .98rem; line-height: 1.7; color: var(--ink-soft); }
+.modal-gurmukhi {
+  font-family: 'Noto Serif Gurmukhi', serif;
+  font-size: 1.05rem; color: var(--rose);
+  margin: -.4rem 0 1rem; line-height: 1.5;
+}
 .modal-detail { font-size: .95rem; line-height: 1.8; color: var(--rose-deep); font-weight: 500; margin: 1rem 0; }
 .modal-quote {
   font-family: 'Cormorant Garamond', serif;
