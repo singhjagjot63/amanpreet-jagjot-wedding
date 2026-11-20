@@ -94,7 +94,7 @@ button { font: inherit; cursor: pointer; }
   position: relative;
   min-height: 100vh;
   display: flex; align-items: center; justify-content: center;
-  padding: 7rem 1.5rem 5rem;
+  padding: 8rem 1.5rem 6rem;
   text-align: center;
   background:
     radial-gradient(circle at 18% 22%, rgba(233, 169, 187, .28), transparent 38%),
@@ -243,27 +243,27 @@ button { font: inherit; cursor: pointer; }
   text-align: center;
 }
 .invocation-inner { max-width: 760px; }
-.invocation .onkar {
+.onkar {
   font-family: 'Noto Serif Gurmukhi', serif;
   font-size: clamp(3rem, 9vw, 4.4rem);
   line-height: 1;
   color: var(--rose);
 }
-.invocation .gur-verse {
+.gur-verse {
   font-family: 'Noto Serif Gurmukhi', serif;
   color: var(--rose-deep);
   font-size: clamp(1.1rem, 3.2vw, 1.4rem);
   line-height: 1.7;
   margin-top: .5rem;
 }
-.invocation .orn {
+.orn {
   display: block;
   width: 90px; height: 1px;
   margin: 1.8rem auto;
   background: linear-gradient(90deg, transparent, var(--pink), transparent);
   position: relative;
 }
-.invocation .orn::after {
+.orn::after {
   content: ''; position: absolute;
   top: -3px; left: 50%; transform: translateX(-50%) rotate(45deg);
   width: 7px; height: 7px; background: var(--pink);
@@ -282,7 +282,7 @@ button { font: inherit; cursor: pointer; }
   font-weight: 600;
   color: var(--rose-deep);
 }
-.invocation .lede {
+.lede {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(1.25rem, 3.4vw, 1.6rem);
   font-style: italic;
@@ -319,6 +319,7 @@ button { font: inherit; cursor: pointer; }
   font-style: italic; color: var(--ink-soft);
   line-height: 1.7;
 }
+.hero .invite-note { margin-bottom: 2.5rem; }
 
 /* ============ EVENT CARDS ============ */
 .event-card {
