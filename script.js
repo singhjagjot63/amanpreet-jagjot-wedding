@@ -1,3 +1,25 @@
+// ============ ENTRY GATE ============
+(function () {
+  var gate = document.getElementById('entryScreen');
+  if (!gate) return;
+  var opened = false;
+
+  function open() {
+    if (opened) return;
+    opened = true;
+    gate.classList.add('closing');
+    document.body.classList.remove('entry-locked');
+    document.dispatchEvent(new CustomEvent('wedding:startMusic'));
+    window.scrollTo(0, 0);
+    setTimeout(function () { if (gate.parentNode) gate.parentNode.removeChild(gate); }, 950);
+  }
+
+  gate.addEventListener('click', open);
+  gate.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
+  });
+})();
+
 // ============ COUNTDOWN ============
 (function () {
   var target = new Date('2027-01-01T15:00:00').getTime();
@@ -88,6 +110,7 @@
   }
   document.addEventListener('click', autoStart);
   document.addEventListener('touchstart', autoStart);
+  document.addEventListener('wedding:startMusic', function () { if (audio.paused) play(); });
 })();
 
 // ============ INVITATION MODALS ============

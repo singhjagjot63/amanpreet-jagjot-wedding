@@ -8,9 +8,36 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=Noto+Serif+Gurmukhi:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=3" />
+  <link rel="stylesheet" href="styles.css?v=4" />
 </head>
-<body>
+<body class="entry-locked">
+
+  <!-- ============ ENTRY GATE ============ -->
+  <div class="entry-screen" id="entryScreen" role="button" tabindex="0" aria-label="Open the wedding invitation">
+    <div class="entry-flowers" aria-hidden="true">
+      <svg class="entry-flower entry-flower-1" viewBox="0 0 200 200"><use href="#rose" /></svg>
+      <svg class="entry-flower entry-flower-2" viewBox="0 0 200 200"><use href="#rose" /></svg>
+      <svg class="entry-flower entry-flower-3" viewBox="0 0 200 200"><use href="#leaf-spray" /></svg>
+      <svg class="entry-flower entry-flower-4" viewBox="0 0 200 200"><use href="#leaf-spray" /></svg>
+    </div>
+    <div class="entry-inner">
+      <div class="entry-onkar" aria-label="Ik Onkar">ੴ</div>
+      <p class="entry-kicker">With the blessings of Waheguru</p>
+      <h1 class="entry-names">
+        <span>Amanpreet</span>
+        <em>&amp;</em>
+        <span>Jagjot</span>
+      </h1>
+      <span class="entry-orn" aria-hidden="true"></span>
+      <p class="entry-sub">You are cordially invited to celebrate the marriage of our daughter</p>
+      <p class="entry-date">01 – 02 January 2027 · Ludhiana, Punjab</p>
+      <button class="entry-btn" id="entryBtn" type="button">
+        <span>Open Invitation</span>
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+      </button>
+      <p class="entry-hint">Tap anywhere to open · music on</p>
+    </div>
+  </div>
 
   <!-- ============ BACKGROUND MUSIC ============ -->
   <audio id="bgMusic" src="sunehra.m4a" loop preload="auto"></audio>
