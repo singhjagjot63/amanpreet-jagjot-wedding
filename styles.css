@@ -373,6 +373,48 @@ button { font: inherit; cursor: pointer; }
 }
 .event-when { font-size: .9rem; color: var(--ink-soft); margin-top: .4rem; font-style: italic; }
 
+/* Ik Onkar at the very start of the Ghadoli card */
+.card-onkar {
+  font-family: 'Noto Serif Gurmukhi', serif;
+  font-size: 1.7rem; line-height: 1;
+  color: var(--rose-deep);
+  margin-bottom: 1rem;
+}
+
+/* Animated dhol & bhangra beside the Ghadoli heading */
+.ghadoli-heading {
+  display: flex; align-items: center;
+  justify-content: flex-start;
+  gap: .55rem; margin: .5rem 0 0;
+}
+.ghadoli-heading h3 { flex: none; margin: 0; }
+.dance-img {
+  object-fit: contain; flex: none;
+  pointer-events: none; user-select: none;
+  filter: drop-shadow(0 4px 6px rgba(124,45,71,.12));
+}
+.dhol-img {
+  width: 54px; height: 54px;
+  transform-origin: center 80%;
+  animation: dhol-beat 1.15s ease-in-out infinite;
+}
+.bhangra-img {
+  width: 40px; height: 70px;
+  transform-origin: center bottom;
+  animation: bhangra-sway 1.7s ease-in-out infinite;
+}
+@keyframes dhol-beat {
+  0%, 100% { transform: scale(1) rotate(-4deg); }
+  50% { transform: scale(1.1) rotate(4deg); }
+}
+@keyframes bhangra-sway {
+  0%, 100% { transform: rotate(-7deg) translateY(0); }
+  50% { transform: rotate(7deg) translateY(-5px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dhol-img, .bhangra-img { animation: none; }
+}
+
 .info-list { display: grid; gap: .95rem; margin: 1.6rem 0; }
 .info-row { display: flex; gap: .9rem; align-items: flex-start; }
 .info-icon {
@@ -530,7 +572,15 @@ button { font: inherit; cursor: pointer; }
   width: 90px; height: 90px; color: var(--pink-soft);
   opacity: .6; margin-bottom: .5rem;
 }
+.modal-onkar {
+  font-family: 'Noto Serif Gurmukhi', serif;
+  font-size: 1.8rem; line-height: 1; color: var(--rose-deep);
+  margin: 0 0 .8rem; text-align: center;
+}
 .modal-kicker { font-size: .68rem; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; color: var(--pink); }
+.modal-ghadoli-heading { justify-content: center; gap: .8rem; margin: .4rem 0 1rem; }
+.modal-ghadoli-heading .dhol-img { width: 60px; height: 60px; }
+.modal-ghadoli-heading .bhangra-img { width: 46px; height: 80px; }
 .modal-card h3 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 2.3rem; font-weight: 600; color: var(--rose-deep);
