@@ -447,6 +447,24 @@ button { font: inherit; cursor: pointer; }
   .sagan-img, .rings-img { animation: none; }
 }
 
+/* Anand Karaj imagery */
+.anand-heading { gap: .8rem; }
+.anand-heading h3 { font-size: clamp(1.9rem, 4.5vw, 2.7rem); }
+.anand-img {
+  width: 60px; height: auto;
+  transform-origin: center bottom;
+  animation: anand-glow 3.2s ease-in-out infinite;
+}
+@keyframes anand-glow {
+  0%, 100% { transform: scale(1); opacity: .92; }
+  50% { transform: scale(1.05); opacity: 1; }
+}
+.modal-card .modal-ghadoli-heading.anand-heading h3 { font-size: clamp(2rem, 5vw, 2.8rem); }
+.modal-ghadoli-heading.anand-heading .anand-img { width: 78px; }
+@media (prefers-reduced-motion: reduce) {
+  .anand-img { animation: none; }
+}
+
 .info-list { display: grid; gap: .95rem; margin: 1.6rem 0; }
 .info-row { display: flex; gap: .9rem; align-items: flex-start; }
 .info-icon {
