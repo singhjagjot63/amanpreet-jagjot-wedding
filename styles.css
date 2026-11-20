@@ -375,10 +375,13 @@ button { font: inherit; cursor: pointer; }
 
 /* Ik Onkar at the very start of the Ghadoli card */
 .card-onkar {
+  grid-column: 1 / -1;
   font-family: 'Noto Serif Gurmukhi', serif;
-  font-size: 1.7rem; line-height: 1;
+  font-size: 1.9rem; line-height: 1;
   color: var(--rose-deep);
-  margin-bottom: 1rem;
+  text-align: center;
+  padding: 1.2rem 0 .3rem;
+  border-bottom: 1px solid var(--blush-deep);
 }
 
 /* Animated dhol & bhangra beside the Ghadoli heading */
