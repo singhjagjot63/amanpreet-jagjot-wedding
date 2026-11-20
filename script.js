@@ -1,6 +1,6 @@
 // ============ COUNTDOWN ============
 (function () {
-  var target = new Date('2026-12-31T17:00:00').getTime();
+  var target = new Date('2027-01-01T15:00:00').getTime();
   var els = ['cdDays', 'cdHours', 'cdMins', 'cdSecs'].map(function (id) { return document.getElementById(id); });
   function pad(n) { return n < 10 ? '0' + n : '' + n; }
   function tick() {
