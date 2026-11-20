@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amanpreet &amp; Jagjot | Wedding Celebrations</title>
+  <meta name="description" content="Celebrate the wedding of Amanpreet and Jagjot — Mehndi, Shagun & Ring Ceremony, and Anand Karaj. December 2026 – January 2027, Ludhiana." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=Noto+Serif+Gurmukhi:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ MUSIC TOGGLE ============ -->
+  <button class="music-toggle" id="musicToggle" aria-label="Toggle background music" aria-pressed="false">
+    <span class="music-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.6"/><circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="1.6"/></svg>
+    </span>
+    <span class="music-label" id="musicLabel">Music On</span>
+  </button>
+
+  <!-- ============ NAV ============ -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#home" class="brand">A <span>&amp;</span> J</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#celebrations">Celebrations</a>
+        <a href="#invitations">Invitations</a>
+        <a href="#rsvp">RSVP</a>
+      </div>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero" id="home">
+    <div class="hero-flowers" aria-hidden="true">
+      <svg class="flower flower-1" viewBox="0 0 200 200"><use href="#rose" /></svg>
+      <svg class="flower flower-2" viewBox="0 0 200 200"><use href="#rose" /></svg>
+      <svg class="flower flower-3" viewBox="0 0 200 200"><use href="#leaf-spray" /></svg>
+      <svg class="flower flower-4" viewBox="0 0 200 200"><use href="#leaf-spray" /></svg>
+    </div>
+    <div class="petals" id="petals" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+      <div class="badge">The Wedding of</div>
+      <h1 class="hero-names">
+        <span>Amanpreet</span>
+        <em>&amp;</em>
+        <span>Jagjot</span>
+      </h1>
+      <p class="hero-sub">With the blessings of their families, we invite you to celebrate</p>
+
+      <div class="date-pill">
+        <span>31 Dec 2026</span>
+        <i></i>
+        <span>02 Jan 2027</span>
+      </div>
+      <p class="hero-location">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg>
+        Ludhiana, Punjab
+      </p>
+
+      <div class="countdown" id="countdown">
+        <div class="cd-box"><strong id="cdDays">--</strong><span>Days</span></div>
+        <div class="cd-box"><strong id="cdHours">--</strong><span>Hours</span></div>
+        <div class="cd-box"><strong id="cdMins">--</strong><span>Minutes</span></div>
+        <div class="cd-box"><strong id="cdSecs">--</strong><span>Seconds</span></div>
+      </div>
+
+      <a href="#celebrations" class="hero-cta">View the celebrations <span aria-hidden="true">↓</span></a>
+    </div>
+  </header>
+
+  <!-- ============ CELEBRATIONS / PROGRAMME ============ -->
+  <main>
+    <section class="section programme" id="celebrations">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">The Programme</p>
+          <h2>Three gatherings to share in, from the first colour to the final celebration.</h2>
+          <p class="section-sub">Every moment, a reason to come together.</p>
+        </div>
+
+        <!-- Event 1 -->
+        <article class="event-card reveal">
+          <div class="date-block">
+            <span class="db-day">THU</span>
+            <strong class="db-num">31</strong>
+            <span class="db-month">DEC 2026</span>
+          </div>
+          <div class="event-body">
+            <div class="event-top">
+              <span class="event-index">01 / 03</span>
+              <span class="event-tag">Mehndi</span>
+            </div>
+            <h3>Mehndi &amp; Sangeet</h3>
+            <p class="event-when">Thursday, 31st December 2026 · 5:00 p.m. onwards</p>
+
+            <div class="info-list">
+              <div class="info-row">
+                <span class="info-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+                <div><strong>5:00 p.m. onwards</strong><small>Mehndi &amp; Sangeet · Dinner to follow</small></div>
+              </div>
+              <div class="info-row">
+                <span class="info-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg></span>
+                <div><strong>Venue to be confirmed</strong><small>Ludhiana, Punjab</small></div>
+              </div>
+              <div class="info-row">
+                <span class="info-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 20v-7m0 0a4 4 0 1 0-4-4m4 4a4 4 0 1 1 4-4M5 20h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+                <div><strong>Hosted by</strong><small>Sdn. Satinder Kaur &amp; S. Jaspreet Singh</small></div>
+              </div>
+            </div>
+
+            <p class="event-quote">"Colours, laughter and the sweetest of songs — come paint the evening with us as we celebrate Amanpreet's mehndi."</p>
+            <p class="punjabi">ਮਹਿੰਦੀ ਦੀ ਰਾਤ — ਰੰਗਾਂ, ਗੀਤਾਂ ਅਤੇ ਖੁਸ਼ੀਆਂ ਦੀ ਸ਼ਾਮ</p>
+
+            <div class="card-actions">
+              <a href="https://www.google.com/maps/search/?api=1&query=Ludhiana%2C+Punjab" target="_blank" rel="noopener" class="dir-btn">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
+                Get Directions
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Event 2 -->
+        <article class="event-card reveal">
+          <div class="date-block">
+            <span class="db-day">FRI</span>
+            <strong class="db-num">01</strong>
+            <span class="db-month">JAN 2027</span>
+          </div>
+          <div class="event-body">
+            <div class="event-top">
+              <span class="event-index">02 / 03</span>
+              <span class="event-tag">Shagun</span>
+            </div>
+            <h3>Shagun &amp; Ring Ceremony</h3>
+            <p class="event-when">Friday, 1st January 2027 · 7:00 p.m.</p>
+
+            <div class="info-list">
+              <div class="info-row">
+                <span class="info-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+                <div><strong>7:00 p.m.</strong><small>Shagun &amp; Ring Ceremony</small></div>
+              </div>
+              <div class="info-row">
+                <span class="info-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 11h16v9H4zM3 11l2-5h14l2 5M9 20v-5h6v5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span>
+                <div><strong>8:00 p.m.</strong><small>Dinner</small></div>
+              </div>
+              <div class="info-row">
+                <span class="info-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg></span>
+                <div><strong>Grand Marian Hotel</strong><small>Model Town, Ludhiana, Punjab</small></div>
+              </div>
+              <div class="info-row">
+                <span class="info-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 20v-7m0 0a4 4 0 1 0-4-4m4 4a4 4 0 1 1 4-4M5 20h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+                <div><strong>Hosted by</strong><small>Sdn. Saranjeet Kaur &amp; S. Jitender Singh, with Sdn. Satinder Kaur &amp; S. Jaspreet Singh</small></div>
+              </div>
+            </div>
+
+            <p class="event-quote">"Join us as we exchange rings and shagun, and bless the couple with love for the journey ahead."</p>
+
+            <div class="card-actions">
+              <a href="https://www.google.com/maps/search/?api=1&query=Grand+Marian+Hotel+Model+Town+Ludhiana" target="_blank" rel="noopener" class="dir-btn">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
+                Get Directions
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Event 3 -->
+        <article class="event-card reveal">
+          <div class="date-block">
+            <span class="db-day">SAT</span>
+            <strong class="db-num">02</strong>
+            <span class="db-month">JAN 2027</span>
+          </div>
+          <div class="event-body">
+            <div class="event-top">
+              <span class="event-index">03 / 03</span>
+              <span class="event-tag">Anand Karaj</span>
+            </div>
+            <h3>Anand Karaj</h3>
+            <p class="event-when">Saturday, 2nd January 2027 · 11:00 a.m.</p>
+
+            <div class="info-list">
+              <div class="info-row">
+                <span class="info-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+                <div><strong>10:00 a.m.</strong><small>Welcome of the Barat</small></div>
+              </div>
+              <div class="info-row">
+                <span class="info-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+                <div><strong>11:00 a.m.</strong><small>Anand Karaj</small></div>
+              </div>
+              <div class="info-row">
+                <span class="info-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg></span>
+                <div><strong>Gurdwara Sri Guru Singh Sabha</strong><small>Near CRPF Quarters, Dugri, Phase-1, Ludhiana</small></div>
+              </div>
+              <div class="info-row">
+                <span class="info-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 11h16v9H4zM3 11l2-5h14l2 5M9 20v-5h6v5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span>
+                <div><strong>Langar / Lunch to follow</strong><small>Alley Greens Resorts, Basant Vihar, Ludhiana, Punjab</small></div>
+              </div>
+            </div>
+
+            <p class="event-quote">"Witness the sacred union as Amanpreet and Jagjot take the four rounds around the Guru Granth Sahib."</p>
+
+            <div class="card-actions">
+              <a href="https://www.google.com/maps/search/?api=1&query=Gurdwara+Sri+Guru+Singh+Sabha+Dugri+Ludhiana" target="_blank" rel="noopener" class="dir-btn">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
+                Get Directions
+              </a>
+              <a href="https://www.google.com/maps/search/?api=1&query=Alley+Greens+Resorts+Basant+Vihar+Ludhiana" target="_blank" rel="noopener" class="dir-btn dir-btn-alt">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
+                Langar venue
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ INVITATION CARDS ============ -->
+    <section class="section invitations" id="invitations">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">The Invitation Cards</p>
+          <h2>Tap a card to read it in full</h2>
+          <p class="section-sub">Each celebration, with all the details.</p>
+        </div>
+
+        <div class="invite-grid">
+          <button class="invite-card reveal" data-target="invite-1" aria-expanded="false">
+            <svg class="card-flower" viewBox="0 0 200 200" aria-hidden="true"><use href="#rose" /></svg>
+            <span class="ic-date">31 DEC 2026</span>
+            <strong>Mehndi &amp; Sangeet</strong>
+            <span class="ic-more">Read invitation <span aria-hidden="true">↗</span></span>
+          </button>
+          <button class="invite-card reveal" data-target="invite-2" aria-expanded="false">
+            <svg class="card-flower" viewBox="0 0 200 200" aria-hidden="true"><use href="#rose" /></svg>
+            <span class="ic-date">01 JAN 2027</span>
+            <strong>Shagun &amp; Ring Ceremony</strong>
+            <span class="ic-more">Read invitation <span aria-hidden="true">↗</span></span>
+          </button>
+          <button class="invite-card reveal" data-target="invite-3" aria-expanded="false">
+            <svg class="card-flower" viewBox="0 0 200 200" aria-hidden="true"><use href="#rose" /></svg>
+            <span class="ic-date">02 JAN 2027</span>
+            <strong>Anand Karaj</strong>
+            <span class="ic-more">Read invitation <span aria-hidden="true">↗</span></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RSVP ============ -->
+    <section class="section rsvp-section" id="rsvp">
+      <div class="container rsvp-inner reveal">
+        <svg class="rsvp-flower" viewBox="0 0 200 200" aria-hidden="true"><use href="#rose" /></svg>
+        <p class="kicker">RSVP</p>
+        <h2>We'd love to have you there</h2>
+        <p>Three days of celebration, and every one is better with you in it. Kindly let us know you'll be joining us.</p>
+        <a href="mailto:amanpreet.jagjot.wedding@example.com?subject=RSVP%20-%20Wedding%20Celebrations" class="rsvp-btn">
+          RSVP with love <span aria-hidden="true">→</span>
+        </a>
+        <p class="rsvp-hint">Questions? Reach out to the families.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-names">Amanpreet <span>&amp;</span> Jagjot</p>
+      <p>31 December 2026 &nbsp;·&nbsp; 2 January 2027 &nbsp;·&nbsp; Ludhiana, Punjab</p>
+      <p class="footer-small">With the blessings of Waheguru</p>
+    </div>
+  </footer>
+
+  <!-- ============ INVITATION MODALS ============ -->
+  <div class="modal" id="invite-1" role="dialog" aria-modal="true" aria-label="Mehndi invitation">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card">
+      <button class="modal-close" data-close aria-label="Close">×</button>
+      <svg class="modal-flower" viewBox="0 0 200 200" aria-hidden="true"><use href="#rose" /></svg>
+      <p class="modal-kicker">The Mehndi</p>
+      <h3>Mehndi &amp; Sangeet</h3>
+      <p class="modal-text">Sdn. Satinder Kaur &amp; S. Jaspreet Singh request the honour of your gracious presence for the Mehndi &amp; Sangeet of their beloved daughter</p>
+      <h4>Amanpreet Kaur</h4>
+      <p class="modal-detail">Thursday, 31st December 2026<br />5:00 p.m. onwards · Dinner to follow</p>
+      <p class="modal-quote">"Colours, laughter and the sweetest of songs — come paint the evening with us as we celebrate Amanpreet's mehndi."</p>
+      <p class="modal-venue">Venue to be confirmed · Ludhiana, Punjab</p>
+    </div>
+  </div>
+
+  <div class="modal" id="invite-2" role="dialog" aria-modal="true" aria-label="Shagun invitation">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card">
+      <button class="modal-close" data-close aria-label="Close">×</button>
+      <svg class="modal-flower" viewBox="0 0 200 200" aria-hidden="true"><use href="#rose" /></svg>
+      <p class="modal-kicker">The Shagun</p>
+      <h3>Shagun &amp; Ring Ceremony</h3>
+      <p class="modal-text">Sdn. Saranjeet Kaur &amp; S. Jitender Singh, together with Sdn. Satinder Kaur &amp; S. Jaspreet Singh, joyfully invite you to celebrate the Shagun &amp; Ring Ceremony of</p>
+      <h4>Jagjot Singh <em>&amp;</em> Amanpreet Kaur</h4>
+      <p class="modal-detail">Friday, 1st January 2027<br />Ceremony 7:00 p.m. · Dinner 8:00 p.m.</p>
+      <p class="modal-quote">"Join us as we exchange rings and shagun, and bless the couple with love for the journey ahead."</p>
+      <p class="modal-venue">Grand Marian Hotel, Model Town, Ludhiana, Punjab</p>
+    </div>
+  </div>
+
+  <div class="modal" id="invite-3" role="dialog" aria-modal="true" aria-label="Anand Karaj invitation">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card">
+      <button class="modal-close" data-close aria-label="Close">×</button>
+      <svg class="modal-flower" viewBox="0 0 200 200" aria-hidden="true"><use href="#rose" /></svg>
+      <p class="modal-kicker">The Anand Karaj</p>
+      <h3>Sacred Union</h3>
+      <p class="modal-text">With the blessings of the grandparents and families, we request the honour of your gracious presence at the Anand Karaj of</p>
+      <h4>Jagjot Singh <em>&amp;</em> Amanpreet Kaur</h4>
+      <p class="modal-detail">Saturday, 2nd January 2027<br />Welcome of the Barat 10:00 a.m. · Anand Karaj 11:00 a.m.</p>
+      <p class="modal-quote">"Witness the sacred union as Amanpreet and Jagjot take the four rounds around the Guru Granth Sahib."</p>
+      <p class="modal-venue">Gurdwara Sri Guru Singh Sabha, near CRPF Quarters, Dugri, Phase-1, Ludhiana<br />Langar / Lunch to follow at Alley Greens Resorts, Basant Vihar, Ludhiana</p>
+    </div>
+  </div>
+
+  <!-- ============ SHARED SVG SYMBOLS ============ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="rose" viewBox="0 0 200 200">
+        <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round">
+          <path d="M100 100c-6-16-2-36 12-46 6 16 2 34-12 46Z" fill="currentColor" fill-opacity=".12"/>
+          <path d="M100 100c14-10 32-12 46-2-14 12-32 14-46 2Z" fill="currentColor" fill-opacity=".12"/>
+          <path d="M100 100c10 14 12 32 2 46-12-14-14-32-2-46Z" fill="currentColor" fill-opacity=".12"/>
+          <path d="M100 100c-14 10-32 12-46 2 14-12 32-14 46-2Z" fill="currentColor" fill-opacity=".12"/>
+          <path d="M100 100c-10-10-12-24 0-32 12 8 14 22 0 32Z"/>
+          <path d="M100 100c10-8 24-10 32 0-8 12-22 14-32 0Z"/>
+          <path d="M100 100c8 10 10 24 0 32-10-8-12-22 0-32Z"/>
+          <path d="M100 100c-10 8-24 10-32 0 8-12 22-14 32 0Z"/>
+          <circle cx="100" cy="100" r="8"/>
+          <path d="M100 108v34M100 142c-10-2-18-8-22-16 12 0 20 6 22 16ZM100 142c10-2 18-8 22-16-12 0-20 6-22 16Z" stroke-width="1.4"/>
+          <path d="M92 124c-12-6-24-4-32 4 12 6 24 4 32-4ZM108 124c12-6 24-4 32 4-12 6-24 4-32-4Z" stroke-width="1.4"/>
+        </g>
+      </symbol>
+      <symbol id="leaf-spray" viewBox="0 0 200 200">
+        <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+          <path d="M40 160C70 110 110 70 170 40"/>
+          <path d="M70 130c-18-2-32-14-34-32 18 2 32 14 34 32ZM88 110c-4-18 2-34 16-44 4 18-2 34-16 44ZM110 88c-14-10-20-26-16-44 14 10 20 26 16 44ZM132 68c-10-14-12-30-4-44 10 14 12 30 4 44ZM150 54c-16-8-24-22-22-40 16 8 24 22 22 40Z" fill="currentColor" fill-opacity=".1"/>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <script src="script.js"></script>
+</body>
+</html>
