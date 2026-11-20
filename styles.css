@@ -237,6 +237,89 @@ button { font: inherit; cursor: pointer; }
 }
 .section-sub { color: var(--ink-soft); font-size: 1rem; margin-top: 1rem; font-style: italic; }
 
+/* ============ INVOCATION / BLESSING ============ */
+.invocation {
+  background: linear-gradient(180deg, var(--cream-warm), var(--blush));
+  text-align: center;
+}
+.invocation-inner { max-width: 760px; }
+.invocation .onkar {
+  font-family: 'Noto Serif Gurmukhi', serif;
+  font-size: clamp(3rem, 9vw, 4.4rem);
+  line-height: 1;
+  color: var(--rose);
+}
+.invocation .gur-verse {
+  font-family: 'Noto Serif Gurmukhi', serif;
+  color: var(--rose-deep);
+  font-size: clamp(1.1rem, 3.2vw, 1.4rem);
+  line-height: 1.7;
+  margin-top: .5rem;
+}
+.invocation .orn {
+  display: block;
+  width: 90px; height: 1px;
+  margin: 1.8rem auto;
+  background: linear-gradient(90deg, transparent, var(--pink), transparent);
+  position: relative;
+}
+.invocation .orn::after {
+  content: ''; position: absolute;
+  top: -3px; left: 50%; transform: translateX(-50%) rotate(45deg);
+  width: 7px; height: 7px; background: var(--pink);
+}
+.grandparents { margin: 0 auto 2rem; }
+.grand-label {
+  display: block;
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: .95rem;
+  margin-bottom: .4rem;
+}
+.grandparents strong {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.35rem, 4vw, 1.9rem);
+  font-weight: 600;
+  color: var(--rose-deep);
+}
+.invocation .lede {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.25rem, 3.4vw, 1.6rem);
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.5;
+  margin: 0 auto 1.5rem;
+  max-width: 32em;
+}
+.names-block { display: grid; gap: .35rem; justify-items: center; margin: 1.2rem 0 1.8rem; }
+.names-block .person {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 6vw, 2.7rem);
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--rose-deep);
+  line-height: 1.1;
+}
+.names-block .parent {
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: .98rem;
+}
+.names-block .with {
+  display: flex; align-items: center; gap: .8rem;
+  font-style: italic; font-size: 1.2rem; color: var(--pink);
+  margin: .3rem 0;
+}
+.names-block .with::before, .names-block .with::after {
+  content: ''; width: 32px; height: 1px; background: var(--pink-soft);
+}
+.invite-note {
+  max-width: 34em; margin: 0 auto;
+  font-style: italic; color: var(--ink-soft);
+  line-height: 1.7;
+}
+
 /* ============ EVENT CARDS ============ */
 .event-card {
   display: grid;
