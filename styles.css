@@ -704,6 +704,46 @@ body.entry-locked { overflow: hidden; }
 .rsvp-btn span { font-size: 1.2rem; }
 .rsvp-hint { margin-top: 1.4rem; font-size: .85rem; color: var(--ink-soft); font-style: italic; }
 
+/* ============ COUSINS' MESSAGE ============ */
+.cousins-section {
+  background: linear-gradient(180deg, var(--cream), var(--blush));
+  text-align: center;
+}
+.cousins-inner { position: relative; max-width: 720px; }
+.cousins-flower {
+  position: absolute; top: -70px; left: 50%;
+  transform: translateX(-50%);
+  width: 130px; height: 130px;
+  color: var(--pink-soft); opacity: .22;
+}
+.cousins-message {
+  font-family: 'Noto Serif Gurmukhi', serif !important;
+  font-size: clamp(1.25rem, 3.6vw, 1.75rem) !important;
+  line-height: 1.7 !important;
+  color: var(--rose-deep) !important;
+  font-weight: 600;
+  margin: 1.6rem auto 0 !important;
+  max-width: 640px;
+}
+.cousins-orn {
+  display: block; width: 90px; height: 1px; margin: 1.8rem auto;
+  background: linear-gradient(90deg, transparent, var(--pink), transparent);
+  position: relative;
+}
+.cousins-orn::after {
+  content: ''; position: absolute;
+  top: -3px; left: 50%; transform: translateX(-50%) rotate(45deg);
+  width: 7px; height: 7px; background: var(--pink);
+}
+.cousins-names {
+  font-family: 'Noto Serif Gurmukhi', serif !important;
+  font-size: 1rem !important;
+  line-height: 2 !important;
+  color: var(--ink-soft) !important;
+  letter-spacing: .02em;
+  max-width: 600px; margin: 0 auto !important;
+}
+
 /* ============ FOOTER ============ */
 .footer {
   background: var(--rose-deep);
