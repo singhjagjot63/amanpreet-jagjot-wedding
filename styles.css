@@ -595,6 +595,25 @@ body.entry-locked { overflow: hidden; }
   .anand-img { animation: none; }
 }
 
+/* Mehandi and Ladies Sangeet imagery */
+.mehandi-heading { gap: .7rem; }
+.mehandi-heading h3 { font-size: clamp(1.7rem, 4vw, 2.5rem); }
+.mehandi-img {
+  width: 62px; height: 62px;
+  object-fit: contain;
+  transform-origin: center;
+  animation: mehandi-sway 3s ease-in-out infinite;
+}
+@keyframes mehandi-sway {
+  0%, 100% { transform: rotate(-3deg) scale(1); }
+  50% { transform: rotate(3deg) scale(1.05); }
+}
+.modal-card .modal-ghadoli-heading.mehandi-heading h3 { font-size: clamp(1.9rem, 5vw, 2.6rem); }
+.modal-ghadoli-heading.mehandi-heading .mehandi-img { width: 74px; height: 74px; }
+@media (prefers-reduced-motion: reduce) {
+  .mehandi-img { animation: none; }
+}
+
 .info-list { display: grid; gap: .95rem; margin: 1.6rem 0; }
 .info-row { display: flex; gap: .9rem; align-items: flex-start; }
 .info-icon {
@@ -873,13 +892,16 @@ body.entry-locked { overflow: hidden; }
   .sagan-img { width: 42px; height: 42px; }
   .rings-img { width: 48px; height: auto; }
   .anand-img { width: 42px; height: auto; }
-  .sagan-heading h3, .anand-heading h3 { font-size: 1.45rem; }
+  .mehandi-img { width: 42px; height: 42px; }
+  .sagan-heading h3, .anand-heading h3, .mehandi-heading h3 { font-size: 1.45rem; }
   .modal-ghadoli-heading .dhol-img { width: 44px; height: 44px; }
   .modal-ghadoli-heading .sagan-img { width: 48px; height: 48px; }
   .modal-ghadoli-heading .rings-img { width: 54px; }
   .modal-ghadoli-heading .anand-img { width: 48px; }
+  .modal-ghadoli-heading .mehandi-img { width: 48px; height: 48px; }
   .modal-card .modal-ghadoli-heading.sagan-heading h3,
-  .modal-card .modal-ghadoli-heading.anand-heading h3 { font-size: 1.65rem; }
+  .modal-card .modal-ghadoli-heading.anand-heading h3,
+  .modal-card .modal-ghadoli-heading.mehandi-heading h3 { font-size: 1.65rem; }
 
   /* Let the date line breathe instead of overflowing the pill */
   .date-pill { flex-wrap: wrap; justify-content: center; gap: .5rem; padding: .8rem 1.2rem; }
