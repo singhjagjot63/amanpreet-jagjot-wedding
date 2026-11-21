@@ -595,7 +595,7 @@ body.entry-locked { overflow: hidden; }
   .anand-img { animation: none; }
 }
 
-/* Mehandi and Ladies Sangeet imagery */
+/* Mehandi and Sangeet imagery */
 .mehandi-heading { gap: .7rem; }
 .mehandi-heading h3 { font-size: clamp(1.7rem, 4vw, 2.5rem); }
 .mehandi-img {
