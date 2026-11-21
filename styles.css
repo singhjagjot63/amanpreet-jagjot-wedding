@@ -24,6 +24,7 @@ body {
   color: var(--ink);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  font-variant-numeric: lining-nums;
 }
 a { text-decoration: none; color: inherit; }
 button { font: inherit; cursor: pointer; }
@@ -297,9 +298,10 @@ body.entry-locked { overflow: hidden; }
   box-shadow: 0 10px 30px var(--shadow);
 }
 .date-pill span {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.15rem; font-weight: 600; color: var(--rose-deep);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.05rem; font-weight: 600; color: var(--rose-deep);
   letter-spacing: .04em;
+  font-variant-numeric: lining-nums tabular-nums;
 }
 .date-pill i { width: 5px; height: 5px; border-radius: 50%; background: var(--pink); }
 .hero-location {
@@ -323,10 +325,10 @@ body.entry-locked { overflow: hidden; }
 }
 .cd-box strong {
   display: block;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2rem; font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.7rem; font-weight: 600;
   color: var(--rose-deep); line-height: 1;
-  font-variant-numeric: tabular-nums;
+  font-variant-numeric: lining-nums tabular-nums;
 }
 .cd-box span {
   display: block; margin-top: .4rem;
@@ -476,9 +478,10 @@ body.entry-locked { overflow: hidden; }
 }
 .db-day { font-size: .72rem; font-weight: 600; letter-spacing: .2em; opacity: .9; }
 .db-num {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 3.6rem; font-weight: 600; line-height: 1;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 2.9rem; font-weight: 600; line-height: 1;
   margin: .3rem 0;
+  font-variant-numeric: lining-nums tabular-nums;
 }
 .db-month { font-size: .72rem; font-weight: 600; letter-spacing: .15em; }
 .event-body { padding: 2rem 2.2rem; }
@@ -516,7 +519,7 @@ body.entry-locked { overflow: hidden; }
   gap: .55rem; margin: .5rem 0 0;
 }
 .ghadoli-heading h3 {
-  flex: none; margin: 0;
+  flex: 0 1 auto; min-width: 0; margin: 0;
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(2.2rem, 5vw, 3rem);
   font-weight: 600; color: var(--rose-deep);
@@ -853,7 +856,7 @@ body.entry-locked { overflow: hidden; }
   .event-card { grid-template-columns: 1fr; }
   .date-block { flex-direction: row; gap: .8rem; padding: 1rem; }
   .date-block::after { display: none; }
-  .db-num { font-size: 2.4rem; margin: 0; }
+  .db-num { font-size: 2rem; margin: 0; }
   .event-body { padding: 1.6rem; }
   .invite-grid { grid-template-columns: 1fr; }
   .countdown { gap: .5rem; }
@@ -861,11 +864,32 @@ body.entry-locked { overflow: hidden; }
   .cd-box strong { font-size: 1.6rem; }
   .music-toggle { bottom: 1rem; left: 1rem; }
   .modal-card { padding: 2.8rem 1.5rem 2rem; }
+
+  /* Keep headings and their artwork inside the card on small screens */
+  .ghadoli-heading { flex-wrap: wrap; gap: .4rem; }
+  .ghadoli-heading h3 { flex: 1 1 auto; min-width: 0; }
+  .dance-img { width: 38px; height: 38px; }
+  .dhol-img { width: 42px; height: 42px; }
+  .sagan-img { width: 42px; height: 42px; }
+  .rings-img { width: 48px; height: auto; }
+  .anand-img { width: 42px; height: auto; }
+  .sagan-heading h3, .anand-heading h3 { font-size: 1.45rem; }
+  .modal-ghadoli-heading .dhol-img { width: 44px; height: 44px; }
+  .modal-ghadoli-heading .sagan-img { width: 48px; height: 48px; }
+  .modal-ghadoli-heading .rings-img { width: 54px; }
+  .modal-ghadoli-heading .anand-img { width: 48px; }
+  .modal-card .modal-ghadoli-heading.sagan-heading h3,
+  .modal-card .modal-ghadoli-heading.anand-heading h3 { font-size: 1.65rem; }
+
+  /* Let the date line breathe instead of overflowing the pill */
+  .date-pill { flex-wrap: wrap; justify-content: center; gap: .5rem; padding: .8rem 1.2rem; }
+  .date-pill span { font-size: .95rem; }
+  .date-pill i { display: none; }
 }
 @media (max-width: 400px) {
   .hero-names span { font-size: 2.8rem; }
-  .date-pill { gap: .7rem; padding: .7rem 1rem; }
-  .date-pill span { font-size: 1rem; }
+  .date-pill { gap: .45rem; padding: .7rem .9rem; }
+  .date-pill span { font-size: .86rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
